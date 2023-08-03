@@ -33,7 +33,7 @@ function replaceExtension(filename: string, extension: string = ".ts"): string {
 
 
 const request = plugin.CodeGeneratorRequest.deserialize(
-  new Uint8Array(fs.readFileSync(process.stdin.fd)),
+  new Uint8Array(fs.readFileSync('/dev/stdin')),
 );
 const response = new plugin.CodeGeneratorResponse({
   supported_features:
